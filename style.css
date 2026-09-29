@@ -1,0 +1,189 @@
+/* Reset de CSS padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #846d55;
+  width: 100%;  
+}
+body{
+  background-color: #dbd2ba;
+}
+body.container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Montserrat', sans-serif;
+  background: #dbd2ba;
+  color: #333;
+  line-height: 1.6;
+  margin: 50px 0;
+  padding: 0 40px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+summary {
+  font-family: 'Prata', sans-serif;
+  font-weight: 700;
+  margin: 10px;
+}
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+img.logo {
+  max-width: 150px;
+  height: auto;
+  align-items: left;
+  padding: 10px;
+  margin-left: 30px;
+}
+
+img {
+  max-width: 350px;
+  height: 450px;
+  margin: 0 auto;
+  display: flex;
+  border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+}
+
+a.nav-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  margin: 0 5px;
+}
+a.nav-link:hover {
+  background-color: #5a4b3a;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+section {
+  width: 80%;
+  padding: 20px;
+  margin: 20px auto;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+section#inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-direction: row;
+}
+
+section#inicio .inicio-conteudo {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+img.secao1 {
+  flex: 0 0 350px;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+}
+
+button {
+  background-color: #846d55;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 200px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: #5a4b3a;
+}
+a.button {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  width: 100%;
+}
+
+section.inicio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-direction: row;
+   align-items: flex-start;
+
+}
+h1 {
+  display: flex;
+  font-size: 40px;
+  flex: 1;
+  margin-bottom: 10px;
+}
+p.textoInicial {
+  display: flex;
+  font-size: 20px;
+  flex: 1;
+}
+
+img.secao1 {
+  width: 350px auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 15px;
+}
+
+summary {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+li {
+  font-size: 15px;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+details summary {
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+

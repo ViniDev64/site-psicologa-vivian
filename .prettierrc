@@ -1,0 +1,31 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "tabWidth": 2,
+  "useTabs": false,
+  "printWidth": 80,
+  "semi": true,
+  "bracketSpacing": true,
+  "arrowParens": "avoid",
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "**/*.html",
+      "options": {
+        "parser": "html"
+      }
+    },
+    {
+      "files": "**/*.js",
+      "options": {
+        "parser": "babel"
+      }
+    },
+    {
+      "files": "**/*.css",
+      "options": {
+        "parser": "css"
+      }
+    }
+  ]
+}
