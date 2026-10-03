@@ -1,0 +1,7 @@
+# Repo git aninhado acidental (não é submodule)
+site-psicologa-vivian/
+
+# Pastas de build
+node_modules/
+.wrangler/
+dist/
