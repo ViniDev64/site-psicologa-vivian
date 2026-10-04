@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://site-psicologa-vivian.pages.dev/sitemap.xml
