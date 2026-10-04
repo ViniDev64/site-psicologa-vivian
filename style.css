@@ -60,7 +60,7 @@ nav .nav-inner {
 }
 
 .nav-links {
-  display: none;
+  display: flex;
   flex-direction: column;
   position: absolute;
   top: 70px;
@@ -73,10 +73,21 @@ nav .nav-inner {
   gap: 8px;
   text-align: center;
   z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-10px) scale(0.98);
+  transition:
+    opacity 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.32s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .nav-links.active {
-  display: flex;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
 }
 
 .burguer {
@@ -93,7 +104,21 @@ nav .nav-inner {
   width: 24px;
   height: 2px;
   background-color: #fff;
+  border-radius: 2px;
   transition: all 0.3s ease;
+}
+
+.burguer.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burguer.active span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.burguer.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 a.nav-link {
@@ -1146,6 +1171,10 @@ section.rodape {
     gap: 16px !important;
     text-align: left !important;
     z-index: auto !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
   }
 
   .burguer {
@@ -1155,7 +1184,7 @@ section.rodape {
 
 @media (max-width: 768px) {
   .nav-links {
-    display: none !important;
+    display: flex !important;
     flex-direction: column !important;
     position: absolute !important;
     top: 70px !important;
@@ -1174,7 +1203,41 @@ section.rodape {
     display: flex !important;
   }
 
-  .nav-links.active {
-    display: flex !important;
+  a.nav-link {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      opacity 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+      color 0.3s ease;
+  }
+
+  .nav-links.active a.nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links.active a.nav-link:nth-child(1) {
+    transition-delay: 0.06s;
+  }
+
+  .nav-links.active a.nav-link:nth-child(2) {
+    transition-delay: 0.12s;
+  }
+
+  .nav-links.active a.nav-link:nth-child(3) {
+    transition-delay: 0.18s;
+  }
+
+  .nav-links.active a.nav-link:nth-child(4) {
+    transition-delay: 0.24s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-links,
+  a.nav-link,
+  .burguer span {
+    transition: none !important;
   }
 }
