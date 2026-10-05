@@ -7,7 +7,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
+  color-scheme: light only;
 }
 
 body {
@@ -1240,5 +1240,24 @@ section.rodape {
   a.nav-link,
   .burguer span {
     transition: none !important;
+  }
+}
+
+/* O backdrop-filter depende do suporte e da GPU do aparelho. Onde ele
+   nao e aplicado, os paineis marronssemi-transparentes deixam o
+   conteudo aparecer por tras e o site fica com aspecto lavado. Nesse
+   caso, usa cor solida. */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  nav,
+  .rodape {
+    background-color: #846d55 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+    .nav-links {
+      background-color: #846d55 !important;
+    }
   }
 }
